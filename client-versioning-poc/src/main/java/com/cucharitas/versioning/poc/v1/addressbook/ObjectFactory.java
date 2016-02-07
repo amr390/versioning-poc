@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the be.cipal.poc.v1.addressbook package. 
+ * generated in the com.cucharitas.versioning.poc.v1.addressbook package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -24,11 +24,11 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _AddressRequestV10_QNAME = new QName("http://www.cipal.be/poc/v1/addressbook", "AddressRequest-v1_0");
-    private final static QName _AddressResponseV10_QNAME = new QName("http://www.cipal.be/poc/v1/addressbook", "AddressResponse-v1_0");
+    private final static QName _AddressRequestV10_QNAME = new QName("http://www.versioning.cucharitas.com/poc/v1/addressbook", "AddressRequest-v1_0");
+    private final static QName _AddressResponseV10_QNAME = new QName("http://www.versioning.cucharitas.com/poc/v1/addressbook", "AddressResponse-v1_0");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: be.cipal.poc.v1.addressbook
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.cucharitas.versioning.poc.v1.addressbook
      * 
      */
     public ObjectFactory() {
@@ -54,7 +54,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link AddressRequestV10 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.cipal.be/poc/v1/addressbook", name = "AddressRequest-v1_0")
+    @XmlElementDecl(namespace = "http://www.versioning.cucharitas.com/poc/v1/addressbook", name = "AddressRequest-v1_0")
     public JAXBElement<AddressRequestV10> createAddressRequestV10(AddressRequestV10 value) {
         return new JAXBElement<AddressRequestV10>(_AddressRequestV10_QNAME, AddressRequestV10 .class, null, value);
     }
@@ -63,7 +63,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link AddressResponseV10 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.cipal.be/poc/v1/addressbook", name = "AddressResponse-v1_0")
+    @XmlElementDecl(namespace = "http://www.versioning.cucharitas.com/poc/v1/addressbook", name = "AddressResponse-v1_0")
     public JAXBElement<AddressResponseV10> createAddressResponseV10(AddressResponseV10 value) {
         return new JAXBElement<AddressResponseV10>(_AddressResponseV10_QNAME, AddressResponseV10 .class, null, value);
     }

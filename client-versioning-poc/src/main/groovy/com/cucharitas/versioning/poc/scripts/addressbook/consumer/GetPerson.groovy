@@ -1,9 +1,9 @@
-package be.cipal.poc.scripts.addressbook.consumer
+package com.cucharitas.versioning.poc.scripts.addressbook.consumer
 
-import be.cipal.poc.v1.addressbook.AddressbookProvider
-import be.cipal.poc.v1.addressbook.GetAddress
-import be.cipal.poc.v1.addressbook.AddressRequestV10
-import be.cipal.poc.v1.addressbook.AddressResponseV10
+import com.cucharitas.versioning.poc.v1.addressbook.AddressbookProvider
+import com.cucharitas.versioning.poc.v1.addressbook.GetAddress
+import com.cucharitas.versioning.poc.v1.addressbook.AddressRequestV10
+import com.cucharitas.versioning.poc.v1.addressbook.AddressResponseV10
 
 final String name = args ? args[0] : 'FN 1'
 

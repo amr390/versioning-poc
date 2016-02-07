@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-workspace name="poc" soapui-version="5.2.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:project name="addressbook">/home/amr/Documents/dev/groovy/versioning-poc/ws-versioning-poc/soapui/addressbook-soapui-project.xml</con:project>
-  <con:project name="non-versioned">/home/amr/Documents/dev/groovy/versioning-poc/ws-versioning-poc/soapui/versioning-soapui-project.xml</con:project>
+  <con:project name="addressbook">/home/amr/dev/groovy/versioning-poc/ws-versioning-poc/soapui/addressbook-soapui-project.xml</con:project>
+  <con:project name="non-versioned">/home/amr/dev/groovy/versioning-poc/ws-versioning-poc/soapui/versioning-soapui-project.xml</con:project>
   <con:collectInfoForSupport>false</con:collectInfoForSupport>
 </con:soapui-workspace>

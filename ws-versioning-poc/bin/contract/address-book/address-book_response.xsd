@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema 
-    xmlns:cmn="http://www.cipal.be/poc/common-types"
-    xmlns:tns="http://www.cipal.be/poc/v1/addressbook/response" 
+    xmlns:cmn="http://www.cucharitas.versioning.com/poc/common-types"
+    xmlns:tns="http://www.cucharitas.versioning.com/poc/v1/addressbook/response" 
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.cipal.be/poc/v1/addressbook/response">
-    <xs:import namespace="http://www.cipal.be/poc/common-types"
+    targetNamespace="http://www.cucharitas.versioning.com/poc/v1/addressbook/response">
+    <xs:import namespace="http://www.cucharitas.versioning.com/poc/common-types"
         schemaLocation="../commons/common-types.xsd" />
 
     <xs:simpleType name="StateType">

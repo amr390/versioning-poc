@@ -17,10 +17,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="firstName" type="{http://www.cipal.be/poc/common-types}LabelType"/>
- *         &lt;element name="lastName" type="{http://www.cipal.be/poc/common-types}LabelType"/>
- *         &lt;element name="idn" type="{http://www.cipal.be/poc/common-types}Id"/>
- *         &lt;element name="address" type="{http://www.cipal.be/poc/v1/addressbook/response}Address"/>
+ *         &lt;element name="firstName" type="{http://www.versioning.cucharitas.com/poc/common-types}LabelType"/>
+ *         &lt;element name="lastName" type="{http://www.versioning.cucharitas.com/poc/common-types}LabelType"/>
+ *         &lt;element name="idn" type="{http://www.versioning.cucharitas.com/poc/common-types}Id"/>
+ *         &lt;element name="address" type="{http://www.versioning.cucharitas.com/poc/v1/addressbook/response}Address"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

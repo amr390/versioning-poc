@@ -19,11 +19,11 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="housenr" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="streetName" type="{http://www.cipal.be/poc/common-types}LabelType"/>
- *         &lt;element name="city" type="{http://www.cipal.be/poc/common-types}LabelType"/>
- *         &lt;element name="state" type="{http://www.cipal.be/poc/v1/addressbook/response}StateType"/>
+ *         &lt;element name="streetName" type="{http://www.versioning.cucharitas.com/poc/common-types}LabelType"/>
+ *         &lt;element name="city" type="{http://www.versioning.cucharitas.com/poc/common-types}LabelType"/>
+ *         &lt;element name="state" type="{http://www.versioning.cucharitas.com/poc/v1/addressbook/response}StateType"/>
  *         &lt;element name="zip" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="phoneNumber" type="{http://www.cipal.be/poc/v1/addressbook/response}Phone"/>
+ *         &lt;element name="phoneNumber" type="{http://www.versioning.cucharitas.com/poc/v1/addressbook/response}Phone"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

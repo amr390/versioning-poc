@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="person" type="{http://www.cipal.be/poc/v1/addressbook/response}Person" maxOccurs="unbounded"/>
+ *         &lt;element name="person" type="{http://www.versioning.cucharitas.com/poc/v1/addressbook/response}Person" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

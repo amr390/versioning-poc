@@ -1,12 +1,12 @@
-package be.cipal.poc
+package com.cucharitas.versioning.poc
 
 import javax.xml.bind.JAXBElement
 import javax.xml.namespace.QName
 
 import org.springframework.beans.factory.annotation.Autowired
 
-import be.cipal.poc.v1.addressbook.response.Person
-import be.cipal.poc.v1.addressbook.response.Persons
+import com.cucharitas.versioning.poc.v1.addressbook.response.Person
+import com.cucharitas.versioning.poc.v1.addressbook.response.Persons
 
 import spock.lang.Specification
 

@@ -18,7 +18,7 @@ import com.cucharitas.versioning.poc.v1.addressbook.response.Person;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="person" type="{http://www.cipal.be/poc/v1/addressbook/response}Person" minOccurs="0"/>
+ *         &lt;element name="person" type="{http://www.versioning.cucharitas.com/poc/v1/addressbook/response}Person" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

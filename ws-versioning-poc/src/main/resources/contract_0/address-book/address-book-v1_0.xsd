@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
-    xmlns:tns="http://www.cucharitas.versioning.com/poc/addressbook/2015/08"
-    xmlns:res="http://www.cucharitas.versioning.com/poc/addressbook/response/2015/08"
+    xmlns:tns="http://www.versioning.cucharitas.com/poc/addressbook/2015/08"
+    xmlns:res="http://www.versioning.cucharitas.com/poc/addressbook/response/2015/08"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:cmn="http://www.cucharitas.versioning.com/poc/common-types"
-    targetNamespace="http://www.cucharitas.versioning.com/poc/addressbook/2015/08">
-    <xs:import namespace="http://www.cucharitas.versioning.com/poc/common-types"
+    xmlns:cmn="http://www.versioning.cucharitas.com/poc/common-types"
+    targetNamespace="http://www.versioning.cucharitas.com/poc/addressbook/2015/08">
+    <xs:import namespace="http://www.versioning.cucharitas.com/poc/common-types"
         schemaLocation="../commons/common-types.xsd" />
-    <xs:import namespace="http://www.cucharitas.versioning.com/poc/addressbook/response/2015/08"
+    <xs:import namespace="http://www.versioning.cucharitas.com/poc/addressbook/response/2015/08"
         schemaLocation="address-book_response-v1_0.xsd" />
 
     <xs:complexType name="AddressResponse-v1_0">

@@ -1,6 +1,6 @@
-<!-- curl \-\-header "content-type: text/xml" @request.xml http://localhost:8080/addressbook -->
+ <!--curl \-\-header "content-type: text/xml" @request.xml http://localhost:8080/addressbook -->
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-    xmlns:gs="http://www.cipal.be/poc/v1/addressbook">
+    xmlns:gs="http://www.versioning.cucharitas.com/poc/v1/addressbook">
    <soapenv:Header/>
    <soapenv:Body>
    	<gs:AddressRequest-v1_0>

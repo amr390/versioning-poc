@@ -1,4 +1,4 @@
-package be.cipal.poc
+package com.cucharitas.versioning.poc
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication

@@ -45,7 +45,7 @@ task runScript(type: JavaExec) {
     description "Run Groovy script"
 
     // Sets the script class to run
-    main = 'be.cipal.poc.scripts.addressbook.consumer.GetPerson'
+    main = 'com.cucharitas.versioning.poc.scripts.addressbook.consumer.GetPerson'
 
     // Set the classpath to run the script
     dependencies{

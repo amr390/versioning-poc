@@ -1,19 +1,19 @@
-package be.cipal.poc
+package com.cucharitas.versioning.poc
 
 import javax.xml.bind.JAXBElement
 import javax.xml.namespace.QName
 
 import org.springframework.beans.factory.annotation.Autowired
 
-import be.cipal.poc.v1.addressbook.AddressRequestV10
-import be.cipal.poc.v1.addressbook.AddressResponseV10
-import be.cipal.poc.v1.addressbook.response.Person
+import com.cucharitas.versioning.poc.v1.addressbook.AddressRequestV10
+import com.cucharitas.versioning.poc.v1.addressbook.AddressResponseV10
+import com.cucharitas.versioning.poc.v1.addressbook.response.Person
 
 import spock.lang.Specification
 
 class AddressBookSpec extends Specification{
 
-    private static final String NAMESPACE_URI = "http://www.cipal.be/poc/addressbook"
+    private static final String NAMESPACE_URI = "http://www.versioning.cucharitas.com/poc/addressbook"
 
     AddressRepository repository
 

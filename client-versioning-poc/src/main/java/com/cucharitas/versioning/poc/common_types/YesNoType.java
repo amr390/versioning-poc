@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "YesNoType", namespace = "http://www.cipal.be/poc/common-types")
+@XmlType(name = "YesNoType", namespace = "http://www.versioning.cucharitas.com/poc/common-types")
 @XmlEnum
 public enum YesNoType {
 

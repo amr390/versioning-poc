@@ -1,11 +1,11 @@
-package be.cipal.poc
+package com.cucharitas.versioning.poc
 
 import groovy.util.logging.Slf4j
 import javax.annotation.PostConstruct
 import org.springframework.stereotype.Component
 import org.springframework.util.Assert
 
-import be.cipal.poc.v1.addressbook.response.*
+import com.cucharitas.versioning.poc.v1.addressbook.response.*
 
 @Slf4j
 @Component

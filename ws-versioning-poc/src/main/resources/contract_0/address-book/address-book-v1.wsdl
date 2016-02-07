@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions name="addressbook-v1"
-    targetNamespace="http://www.cucharitas.versioning.com/poc/addressbook-v1"
+    targetNamespace="http://www.versioning.cucharitas.com/poc/addressbook-v1"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-    xmlns:tns="http://www.cucharitas.versioning.com/poc/addressbook-v1"
-    xmlns:ns1="http://www.cucharitas.versioning.com/poc/addressbook/2015/09"
+    xmlns:tns="http://www.versioning.cucharitas.com/poc/addressbook-v1"
+    xmlns:ns1="http://www.versioning.cucharitas.com/poc/addressbook/2015/09"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
     <wsdl:types>
         <schema xmlns="http://www.w3.org/2001/XMLSchema">
-            <import namespace="http://www.cucharitas.versioning.com/poc/addressbook/2015/09" schemaLocation="address-book-v1_1.xsd"/>
+            <import namespace="http://www.versioning.cucharitas.com/poc/addressbook/2015/09" schemaLocation="address-book-v1_1.xsd"/>
         </schema>
     </wsdl:types>
 

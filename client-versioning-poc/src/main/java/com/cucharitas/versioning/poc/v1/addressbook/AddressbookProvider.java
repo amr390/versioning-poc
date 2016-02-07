@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "addressbookProvider", targetNamespace = "http://www.cipal.be/poc/v1/addressbook")
+@WebService(name = "addressbookProvider", targetNamespace = "http://www.versioning.cucharitas.com/poc/v1/addressbook")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
     com.cucharitas.versioning.poc.v1.addressbook.ObjectFactory.class,
@@ -29,12 +29,12 @@ public interface AddressbookProvider {
      * 
      * @param parameters
      * @return
-     *     returns be.cipal.poc.v1.addressbook.AddressResponseV10
+     *     returns com.cucharitas.versioning.poc.v1.addressbook.AddressResponseV10
      */
     @WebMethod
-    @WebResult(name = "AddressResponse-v1_0", targetNamespace = "http://www.cipal.be/poc/v1/addressbook", partName = "parameters")
+    @WebResult(name = "AddressResponse-v1_0", targetNamespace = "http://www.versioning.cucharitas.com/poc/v1/addressbook", partName = "parameters")
     public AddressResponseV10 getAddress(
-        @WebParam(name = "AddressRequest-v1_0", targetNamespace = "http://www.cipal.be/poc/v1/addressbook", partName = "parameters")
+        @WebParam(name = "AddressRequest-v1_0", targetNamespace = "http://www.versioning.cucharitas.com/poc/v1/addressbook", partName = "parameters")
         AddressRequestV10 parameters);
 
 }

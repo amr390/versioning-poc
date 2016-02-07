@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "getAddress", targetNamespace = "http://www.cipal.be/poc/v1/addressbook", wsdlLocation = "http://localhost:8080/addressbook/getAddress.wsdl")
+@WebServiceClient(name = "getAddress", targetNamespace = "http://www.versioning.cucharitas.com/poc/v1/addressbook", wsdlLocation = "http://localhost:8080/addressbook/getAddress.wsdl")
 public class GetAddress
     extends Service
 {
 
     private final static URL GETADDRESS_WSDL_LOCATION;
     private final static WebServiceException GETADDRESS_EXCEPTION;
-    private final static QName GETADDRESS_QNAME = new QName("http://www.cipal.be/poc/v1/addressbook", "getAddress");
+    private final static QName GETADDRESS_QNAME = new QName("http://www.versioning.cucharitas.com/poc/v1/addressbook", "getAddress");
 
     static {
         URL url = null;
@@ -69,7 +69,7 @@ public class GetAddress
      */
     @WebEndpoint(name = "getAddressPort")
     public AddressbookProvider getGetAddressPort() {
-        return super.getPort(new QName("http://www.cipal.be/poc/v1/addressbook", "getAddressPort"), AddressbookProvider.class);
+        return super.getPort(new QName("http://www.versioning.cucharitas.com/poc/v1/addressbook", "getAddressPort"), AddressbookProvider.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class GetAddress
      */
     @WebEndpoint(name = "getAddressPort")
     public AddressbookProvider getGetAddressPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://www.cipal.be/poc/v1/addressbook", "getAddressPort"), AddressbookProvider.class, features);
+        return super.getPort(new QName("http://www.versioning.cucharitas.com/poc/v1/addressbook", "getAddressPort"), AddressbookProvider.class, features);
     }
 
     private static URL __getWsdlLocation() {
