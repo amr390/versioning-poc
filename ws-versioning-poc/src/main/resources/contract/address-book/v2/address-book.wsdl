@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="addressbook"
+    targetNamespace="http://www.cucharitas.versioning.com/poc/v2/addressbook"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://www.cucharitas.versioning.com/poc/v2/addressbook"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://www.cucharitas.versioning.com/poc/v2/addressbook" schemaLocation="address-book.xsd"/>
+        </schema>
+    </wsdl:types>
+
+    <wsdl:message name="GetAddressResponse">
+        <wsdl:part name="parameters" element="tns:AddressResponse-v2_0" />
+    </wsdl:message>
+    <wsdl:message name="GetAddressRequest">
+        <wsdl:part name="parameters" element="tns:AddressRequest-v2_0" />
+    </wsdl:message>
+    <wsdl:message name="ListAddressRequest">
+        <wsdl:part name="parameters" element="tns:VoidRequest-v2_0" />
+    </wsdl:message>
+    <wsdl:message name="ListAddressResponse">
+        <wsdl:part name="parameters" element="tns:AddressResponse-v2_0" />
+    </wsdl:message>
+
+    <wsdl:portType name="addressbookProvider">
+        <wsdl:operation name="getAddress">
+            <wsdl:input name="AddressRequest" message="tns:GetAddressRequest">
+            </wsdl:input>
+            <wsdl:output name="AddressResponse" message="tns:GetAddressResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="listAddress">
+            <wsdl:input name="AddressRequest"  message="tns:ListAddressRequest"/>
+            <wsdl:output name="AddressResponse" message="tns:ListAddressResponse" />
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="AddressSoapBinding" type="tns:addressbookProvider">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getAddress">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="address">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="addressResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="listAddress">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="address">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="addressResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="getAddress">
+        <wsdl:port name="getAddressPort" binding="tns:AddressSoapBinding">
+            <soap:address location="http://localhost:9090/getAddressPort"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:service name="listAddresses">
+        <wsdl:port name="getAddressPort" binding="tns:AddressSoapBinding">
+            <soap:address location="http://localhost:9090/listAddressPort"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

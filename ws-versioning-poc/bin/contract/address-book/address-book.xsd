@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://www.cipal.be/poc/v1/addressbook"
+    xmlns:res="http://www.cipal.be/poc/v1/addressbook/response"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:cmn="http://www.cipal.be/poc/common-types"
+    targetNamespace="http://www.cipal.be/poc/v1/addressbook">
+    <xs:import namespace="http://www.cipal.be/poc/common-types"
+        schemaLocation="../commons/common-types.xsd" />
+    <xs:import namespace="http://www.cipal.be/poc/v1/addressbook/response"
+        schemaLocation="address-book_response.xsd" />
+
+    <xs:element name="AddressRequest-v1_0" type="tns:AddressRequest-v1_0" />
+    <xs:element name="AddressResponse-v1_0" type="tns:AddressResponse-v1_0" />
+    <xs:element name="VoidRequest-v1_1" type="tns:VoidRequest-v1_1" />
+    <xs:element name="AddressResponse-v1_1" type="tns:AddressResponse-v1_1" />
+
+    <xs:complexType name="AddressResponse-v1_0">
+        <xs:sequence>
+            <xs:element name="person" minOccurs="0" type="res:Person" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AddressRequest-v1_0">
+        <xs:sequence>
+            <xs:element minOccurs="1" name="name" type="cmn:LabelType">
+                <xs:annotation>
+                    <xs:documentation>
+                        Gives a name for the person, street, or city to find.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="VoidRequest-v1_1">
+        <xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AddressResponse-v1_1">
+        <xs:sequence>
+            <xs:element name="persons" minOccurs="0" type="res:Persons" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

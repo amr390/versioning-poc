@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+    xmlns:cmn="http://www.cipal.be/poc/common-types"
+    xmlns:tns="http://www.cipal.be/poc/v1/addressbook/response" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.cipal.be/poc/v1/addressbook/response">
+    <xs:import namespace="http://www.cipal.be/poc/common-types"
+        schemaLocation="../commons/common-types.xsd" />
+
+    <xs:simpleType name="StateType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="WL"/>
+            <xs:enumeration value="FL"/>
+            <xs:enumeration value="BR"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Phone">
+        <xs:sequence>
+            <xs:element name="areaCode" type="xs:int"/>
+            <xs:element name="exchange" type="xs:string"/>
+            <xs:element name="number" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--<xs:complexType name="Addresses">-->
+        <!--<xs:sequence>-->
+            <!--<xs:element minOccurs="0" name="address" type="tns:Address"/>-->
+        <!--</xs:sequence>-->
+    <!--</xs:complexType>-->
+
+    <xs:complexType name="Address">
+        <xs:sequence>
+            <xs:element name="housenr" type="xs:int"/>
+            <xs:element name="streetName" type="cmn:LabelType"/>
+            <xs:element name="city" type="cmn:LabelType"/>
+            <xs:element name="state" type="tns:StateType"/>
+            <xs:element name="zip" type="xs:int"/>
+            <xs:element name="phoneNumber" type="tns:Phone"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Person">
+        <xs:sequence>
+            <xs:element maxOccurs="1" name="firstName" type="cmn:LabelType"/>
+            <xs:element maxOccurs="1" name="lastName" type="cmn:LabelType"/>
+            <xs:element maxOccurs="1" name="idn" type="cmn:Id"/>
+            <xs:element name="address" type="tns:Address" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Persons">
+        <xs:sequence>
+            <xs:element name="person" minOccurs="1" maxOccurs="unbounded" type="tns:Person" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

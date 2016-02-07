@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ca5db908-4703-4fa2-a053-c4a8e01bf671" activeEnvironment="Default" name="non-versioned" resourceRoot="" soapui-version="5.2.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="49d03a06-65fd-43d9-8d74-019b221c8ea8" wsaVersion="NONE" name="getAddressSoapBinding" type="wsdl" bindingName="{http://www.cipal.be/poc/addressbook}getAddressSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/addressbook/getAddress.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/addressbook/getAddress.wsdl"><con:part><con:url>http://localhost:8080/addressbook/getAddress.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="addressbook" targetNamespace="http://www.cipal.be/poc/addressbook" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.cipal.be/poc/addressbook" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://www.cipal.be/poc/addressbook" schemaLocation="address-book.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="AddressResponse">
+    <wsdl:part element="tns:AddressResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="AddressRequest">
+    <wsdl:part element="tns:AddressRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="addressbookProvider">
+    <wsdl:operation name="getAddress">
+      <wsdl:input message="tns:AddressRequest" name="AddressRequest"></wsdl:input>
+      <wsdl:output message="tns:AddressResponse" name="AddressResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="getAddressSoapBinding" type="tns:addressbookProvider">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getAddress">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="address">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addressResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="getAddress">
+    <wsdl:port binding="tns:getAddressSoapBinding" name="getAddressPort">
+      <soap:address location="http://localhost:8080/getAddressPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/addressbook/address-book.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.cipal.be/poc/addressbook" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.cipal.be/poc/addressbook" xmlns:res="http://www.cipal.be/poc/addressbook/response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cmn="http://www.cipal.be/poc/common-types">
+  <xs:import namespace="http://www.cipal.be/poc/common-types" schemaLocation="../commons/common-types.xsd"/>
+  <xs:import namespace="http://www.cipal.be/poc/addressbook/response" schemaLocation="address-book_response.xsd"/>
+  <xs:element name="AddressRequest" type="tns:AddressRequest"/>
+  <xs:element name="AddressResponse" type="tns:AddressResponse"/>
+  <xs:complexType name="AddressResponse">
+    <xs:sequence>
+      <xs:element name="person" minOccurs="0" type="res:Person"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="name" type="cmn:LabelType">
+        <xs:annotation>
+          <xs:documentation>Gives a name for the person, street, or city to find.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/commons/common-types.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.cipal.be/poc/common-types" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.cipal.be/poc/common-types">
+  <xs:simpleType name="Id">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{8}[A-Z]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="YesNoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yes"/>
+      <xs:enumeration value="no"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LabelType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NonEmptyStringType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/addressbook/address-book_response.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.cipal.be/poc/addressbook/response" version="1.0" xmlns:cmn="http://www.cipal.be/poc/common-types" xmlns:tns="http://www.cipal.be/poc/addressbook/response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.cipal.be/poc/common-types" schemaLocation="../commons/common-types.xsd"/>
+  <xs:simpleType name="StateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WL"/>
+      <xs:enumeration value="FL"/>
+      <xs:enumeration value="BR"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Phone">
+    <xs:sequence>
+      <xs:element name="areaCode" type="xs:int"/>
+      <xs:element name="exchange" type="xs:string"/>
+      <xs:element name="number" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--<xs:complexType name="Addresses">-->
+  <!--<xs:sequence>-->
+  <!--<xs:element minOccurs="0" name="address" type="tns:Address"/>-->
+  <!--</xs:sequence>-->
+  <!--</xs:complexType>-->
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element name="housenr" type="xs:int"/>
+      <xs:element name="streetName" type="cmn:LabelType"/>
+      <xs:element name="city" type="cmn:LabelType"/>
+      <xs:element name="state" type="tns:StateType"/>
+      <xs:element name="zip" type="xs:int"/>
+      <xs:element name="phoneNumber" type="tns:Phone"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element maxOccurs="1" name="firstName" type="cmn:LabelType"/>
+      <xs:element maxOccurs="1" name="lastName" type="cmn:LabelType"/>
+      <xs:element maxOccurs="1" name="idn" type="cmn:Id"/>
+      <xs:element name="address" type="tns:Address"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/getAddressPort</con:endpoint></con:endpoints><con:operation id="23b79789-9f34-4fa4-896b-a2cc8f16020c" isOneWay="false" action="" name="getAddress" bindingOperationName="getAddress" outputName="addressResponse" inputName="address" receivesAttachments="false" sendsAttachments="false" anonymous="optional" type="Request-Response"><con:settings/><con:call id="36dca34d-c4a2-4f44-92fd-880538d63f91" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@bind_address"/><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/addressbook</con:endpoint><con:request><![CDATA[<soapenv:Envelope 
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:tns="http://www.cipal.be/poc/addressbook">
+   <soapenv:Header/>
+   <soapenv:Body>
+   	<tns:AddressRequest>
+   		<name>10000002a</name>
+   	</tns:AddressRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+    xmlns:cmn="http://www.cucharitas.versioning.com/poc/common-types"
+    xmlns:tns="http://www.cucharitas.versioning.com/poc/addressbook/2015/09"
+    xmlns:ns1="http://www.cucharitas.versioning.com/poc/addressbook/2015/08"
+    xmlns:res="http://www.cucharitas.versioning.com/poc/addressbook/response/2015/08"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.cucharitas.versioning.com/poc/addressbook/2015/09" version="1.1">
+    <xs:import namespace="http://www.cucharitas.versioning.com/poc/addressbook/response/2015/08"
+        schemaLocation="address-book_response-v1_0.xsd" />
+    <xs:import namespace="http://www.cucharitas.versioning.com/poc/addressbook/2015/08"
+        schemaLocation="address-book-v1_0.xsd" />
+    <xs:import namespace="http://www.cucharitas.versioning.com/poc/common-types"
+        schemaLocation="../commons/common-types.xsd" />
+
+    <xs:element name="AddressRequest-v1_0" type="ns1:AddressRequest-v1_0" />
+    <xs:element name="AddressResponse-v1_0" type="ns1:AddressResponse-v1_0" />
+    <xs:element name="VoidRequest-v1_1" type="tns:VoidRequest-v1_1" />
+    <xs:element name="AddressResponse-v1_1" type="tns:AddressResponse-v1_1" />
+    
+    <xs:complexType name="VoidRequest-v1_1">
+        <xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AddressResponse-v1_1">
+        <xs:sequence>
+            <xs:element name="persons" minOccurs="0" type="tns:Persons" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Persons">
+        <xs:sequence>
+            <xs:element name="person" minOccurs="1" maxOccurs="unbounded" type="res:Person" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
